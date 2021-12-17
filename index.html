@@ -1,0 +1,16 @@
+<html>
+    <head>
+            Libros
+    </head>
+    <body>
+    	{% for libreria in libreria_list %}
+    	    <h2> {{ libreria.libro }} <b>{{ libreria.escritor }}</b> </h2>
+    	    <p> {{ libreria.fecha }} </p>
+            <div>
+                {% if libreria.tapa %}
+                    <img src="{{ libreria.tapa.url }}" alt="{{ libreria.libro }} {{persona.escritor}}">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </body>
+</html>
